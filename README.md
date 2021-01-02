@@ -1,10 +1,6 @@
 # Changelog
 Los cambios notables en este proyecto serán descriptos en este archivo.
 
-## [Fase 1] - 2020-11-04
-### Change
-- `Carousel`, se hicieron ajustes para dar soporte de accesibilidad al componente y se agregó la documentación pertinente para su componetización. (los test solo se van a poder hacer en el storybook o integrado en alguna vista).
-- Se agregó en `helpers.scss`, a los estilos `[hidden]` y `[tabindex="0"]` important.
 
 ## [Desafio 3] - 
 ### Change
