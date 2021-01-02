@@ -1,0 +1,126 @@
+/*
+*
+* 1. Tener cuidado con esta variable, afecta a muchos componentes.
+*
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+$font-primary: 'Roboto', sans-serif;
+
+// Colors general
+
+
+
+// colors que no van!
+// $color-white-1: #fff;
+// $color-black-1: #303030;
+$color-gray-1:#ebebeb;
+$color-gray-2: #666;
+$color-gray-3: #333;
+$color-gray-4: #4c4c4c;
+$color-gray-5: #5e5e5e;
+$color-pink-1: #FF009A;
+$color-pink-2: #ff0099bb;
+
+
+// colors que van!
+$color-black-1: #343a40;
+$color-black-2: #23272b;
+
+$color-white-1: #fff;
+
+$color-red-1: #dc3545;
+$color-red-1-hover: #bb2d3b;
+
+$color-gray-2: #666;
+
+$color-green-1: #198754;
+$color-green-1-hover: #157347;
+
+
+
+
+
+// Component padding
+
+$component-padding: 16px; /* 1 */ 
+
+
+//Normalize
+* {
+  text-decoration: none;
+}
+
+// Helpers
+
+.container {
+  margin:auto;
+  width: 100%;
+}
+
+.fix-container { /*1*/
+  margin-top: 80px; 
+  min-height: calc(100vh - 330px);                                            
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.margin-0 {
+  margin:0 !important;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+  }
+
+.subtitle1 {
+    margin: 64px 0 32px;
+    color: $color-gray-2;
+}
+
+.link {
+  color: $color-black-1;
+
+  &:hover {
+      text-decoration: none;
+      color: $color-black-1;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}

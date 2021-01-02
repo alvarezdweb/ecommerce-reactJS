@@ -1,0 +1,67 @@
+@import '../../Config.scss';
+
+$itemDetail-background: $color-white-1;
+$itemDetail-shadow: 0 10px 10px 1px rgba(0, 0, 0, .2);
+$itemDetail-radius: 6px;
+
+
+
+.item-detail {
+    background-color: $itemDetail-background;
+    border-radius: $itemDetail-radius;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    width: 100%;
+    min-height: 400px;
+    max-width: 900px;
+    &__media {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: $component-padding;
+    }
+
+    &__media {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img {
+        width: 250px;
+    }
+
+    &__content {
+        width: 300px;
+        padding: $component-padding;
+    }
+    
+    &__name,
+    &__price {
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    &__addCart {
+        margin: 20px;
+        font-size: 18px;
+    }
+
+    &:hover {
+        box-shadow: $itemDetail-shadow;
+    }
+}
+
+.spinner {
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 859px) {
+  
+  }

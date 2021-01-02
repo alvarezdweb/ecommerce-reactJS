@@ -1,0 +1,65 @@
+@import '../../Config.scss';
+
+$item-radius: 6px;
+$item-background: $color-white-1;
+$item-text-color: $color-gray-2;
+$item-shadow: 0 10px 10px 1px rgba(0, 0, 0, .2);
+
+.item {
+    margin: 0 16px 50px;
+    cursor: pointer;
+    position: relative;
+    height: 280px;
+    width: 240px;
+    min-width: 240px;
+    background-color: $item-background;
+    border-radius: $item-radius;
+    transition: .3s height ease-in-out, .3s margin ease-in-out;
+    overflow: hidden;
+
+    &__header {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img {
+        padding: 8px;
+        max-height: 200px;
+       
+    }
+
+    &__divider {
+        margin: 6px 0;
+        width:100%;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    &__body {
+       
+    }
+
+    &__price {
+        margin: 0;
+        padding: 16px 0 0 32px ;
+        font-size: 24px;
+    }
+
+    &__name {
+        padding: 0 32px;
+        color: $item-text-color;
+        display: none;
+    }
+
+    &:hover,
+    &:hover .item__name {
+        height: 320px;
+        margin-bottom: 10px;
+        box-shadow: $item-shadow;
+        display: block;
+    }
+}
+
+

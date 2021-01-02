@@ -1,0 +1,113 @@
+
+@import '../../Config.scss';
+
+$navbar-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+$navbar-color: $color-black-1;
+$navbar-color-hover: $color-black-2;
+$navbar-button-text-color: $color-white-1;
+
+
+.menu-bar {
+    min-width: 320px;
+    box-shadow: $navbar-shadow;
+    
+    &__container {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__brand {
+           
+        a {
+            display: flex;
+            align-items: center;
+        }
+        
+        img {
+            width: 40px;
+        }
+
+        span {
+            padding-left: 8px;
+            font-size: 24px;
+            font-weight: 900;
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        color: $navbar-color;
+        font-size: 20px;
+        transition: .3s color ease-in-out;
+
+        &:hover{
+            text-decoration: none;
+            color: $navbar-color-hover;
+        }
+    }
+
+    &__cart-count {
+        font-size: 16px;
+        font-weight: 700;
+        vertical-align: top;
+        padding-left: 3px;        
+    }
+
+    &__dropdown {
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        margin-right: 32px;
+        padding: 10px;
+        color: $navbar-button-text-color;
+        background-color: $navbar-color;
+        text-align: center;
+        width: 160px;
+
+        &:hover {
+            background-color: $navbar-color-hover;
+        }
+    }
+
+    &__dropdown-title {
+       i {
+           vertical-align: middle;
+           margin-left: 5px;
+       }
+        
+    }
+
+    &__dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 0;
+        z-index: 1;
+        margin-top: 16px;
+        text-align: left;
+
+        
+    }
+
+    &__dropdown-link {
+        width: 100%;
+        display: block;
+        padding: 6px 12px;
+        color:$navbar-color;
+
+        &:hover {
+            color: $navbar-color-hover;
+            text-decoration: none;
+        }
+    }
+}
+
+

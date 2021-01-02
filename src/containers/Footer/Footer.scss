@@ -1,0 +1,21 @@
+@import '../../Config.scss';
+
+$footer-background-1: $color-black-2;
+$footer-text: $color-white-1;
+
+.footer {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 0;
+    height: 100px;
+    background-color: $footer-background-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        font-weight: 300;
+        font-size: 14px;
+        color: $footer-text;
+    }
+}

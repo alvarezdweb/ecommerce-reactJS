@@ -1,0 +1,33 @@
+@import '../../Config.scss';
+
+$button-backgroud: $color-black-1;
+$button-backgroud-hover: $color-black-2;
+$button-text: $color-white-1;
+$button-backgroud-disabled: $color-gray-2;
+
+.button {
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    background-color: $button-backgroud;
+    color: $button-text;
+    transition: .3s background-color ease-in-out;
+
+    &--disabled {
+        cursor: default;
+        background-color: $button-backgroud-disabled;
+
+        &:hover {
+            background-color: $button-backgroud-disabled !important;
+        }
+    }
+
+    &:hover {
+        background-color: $button-backgroud-hover;
+    }
+
+    &:focus {
+        outline: none;
+    }
+    
+}
