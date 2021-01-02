@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import { getFirestore } from "../database/firebase";
+import React, { useContext, useEffect, useState } from 'react';
+import { getFirestore } from '../database/firebase';
 
 
 const AppContext = React.createContext();
@@ -20,7 +20,7 @@ export const AppProvider = ({children}) => {
     const getProducts = ( catId = 0 ) => {
         const db = getFirestore();
        if( catId==0 ) {
-        const itemCollection = db.collection("products");
+        const itemCollection = db.collection('products');
          itemCollection.get().then((response)=>{
             const aux = response.docs.map(element => {
                 return {id:element.id ,...element.data()};
@@ -28,7 +28,7 @@ export const AppProvider = ({children}) => {
             setProducts(aux);
         });
        }else { 
-        const itemCollection = db.collection("products").where('categoryId','==',catId);
+        const itemCollection = db.collection('products').where('categoryId','==',catId);
          itemCollection.get().then((response)=>{
             const aux = response.docs.map(element => {
                 return {id:element.id ,...element.data()};
@@ -40,7 +40,7 @@ export const AppProvider = ({children}) => {
 
     const getCategories = () => {
         const db = getFirestore();
-        const itemCollection = db.collection("categories");
+        const itemCollection = db.collection('categories');
         
         itemCollection.get().then((response)=>{
             const aux = response.docs.map(element => {
@@ -53,7 +53,7 @@ export const AppProvider = ({children}) => {
     const getProductById = (id) => {
         setLoad(true);
         const db = getFirestore();
-        const itemCollection = db.collection("products");
+        const itemCollection = db.collection('products');
         const item = itemCollection.doc(id);
         item.get().then((doc) => {
            if(doc.data()){

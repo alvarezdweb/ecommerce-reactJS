@@ -14,13 +14,13 @@ const ItemDetailContainer = () => {
     },[])
 
     return(
-      <main className="item-detail-container container fix-container">
+      <main className='item-detail-container container fix-container'>
             {
               ctx.product.name?
               <ItemDetail id={itemId} />:
               <>
-                <h3 className="item-detail-container__not-found">Producto no encontrado</h3>
-                <Link className="item-detail-container__link" to={'/'}>Volver al inicio</Link>
+                <h3 className='item-detail-container__not-found'>Producto no encontrado</h3>
+                <Link className='item-detail-container__link' to={'/'}>Volver al inicio</Link>
               </>
             }
       </main>

@@ -13,9 +13,9 @@ const Modal = ({id,children}) => {
     }
 
     return(
-        <div id={id} className="modal">
-            <div className="modal__msg">
-                <Button className="modal__button" onClick={closeModal}>X</Button>
+        <div id={id} className='modal'>
+            <div className='modal__msg'>
+                <Button className='modal__button' onClick={closeModal}>X</Button>
                 {children}
             </div>
         </div>

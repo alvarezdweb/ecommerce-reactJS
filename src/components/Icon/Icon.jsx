@@ -1,7 +1,9 @@
 
-const Icon = ({icon}) => {
+const Icon = ({icon, className}) => {
     return (
-        <i className={`fas fa-${icon}`}></i>
+        <i 
+            className={`fas fa-${icon} ${className}`}
+        ></i>
     );
 }
 

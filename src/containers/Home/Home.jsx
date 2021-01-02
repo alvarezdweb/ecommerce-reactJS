@@ -4,7 +4,7 @@ import ItemList from '../../components/ItemList/ItemList';
 const Home = () => {
 
     return(
-        <main className="home container fix-container">
+        <main className='home container fix-container'>
             <ItemList/>      
         </main>
     );

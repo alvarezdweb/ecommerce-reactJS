@@ -14,7 +14,7 @@ const ItemList = ({catId}) => {
 
     return(
         
-        <div className="itemlist">
+        <div className='itemlist'>
             {
               catId?
               ctx.filteredProducts.length==0?

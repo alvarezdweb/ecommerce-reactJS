@@ -18,13 +18,13 @@ const ItemDetail = ({id}) => {
     const setQuantity = (e) => {
         switch ( e.target.id ) {
 
-            case "increment":
+            case 'increment':
                 if( counter < ctx.product.quantity ) {
                     setCounter(counter + 1);
                 }
                 break;
 
-            case "decrement":
+            case 'decrement':
                 if( counter > 0 ) {
                     setCounter(counter - 1);
                 }
@@ -38,30 +38,30 @@ const ItemDetail = ({id}) => {
 
     return(
         ctx.load?
-        <div className="item-detail">
+        <div className='item-detail'>
             <Spinner/>
         </div>:
-        <div className="item-detail">
-            <div className="item-detail__media">
-                <img className="item-detail__img" src={ctx.product.img} alt={ctx.product.name}/>
+        <div className='item-detail'>
+            <div className='item-detail__media'>
+                <img className='item-detail__img' src={ctx.product.img} alt={ctx.product.name}/>
                 <ItemCounter
                     onAdd={(e)=>setQuantity(e)}
                     initialValue={counter}
                     maxValue={ctx.product.quantity}
                 />
-                <Button className="item-detail__addCart" onClick={addToCart}>Agregar al carrito</Button>
+                <Button className='item-detail__addCart' onClick={addToCart}>Agregar al carrito</Button>
             </div>
-            <div className="item-detail__content">
-                <p className="item-detail__name">
+            <div className='item-detail__content'>
+                <p className='item-detail__name'>
                     {ctx.product.name}
                 </p>
-                <p className="item-detail__specs">
+                <p className='item-detail__specs'>
                     {`Marca: ${ctx.product.brand}`} <br/>
                     {`Modelo: ${ctx.product.model}`} <br/>
                     {`Linea: ${ctx.product.line}`} <br/>
                 </p>
-                <p className="item-detail__descrip">{ctx.product.description}</p>
-                <p className="item-detail__price">{`$ ${ctx.product.price}`}</p>
+                <p className='item-detail__descrip'>{ctx.product.description}</p>
+                <p className='item-detail__price'>{`$ ${ctx.product.price}`}</p>
             </div>
         </div>
     );
